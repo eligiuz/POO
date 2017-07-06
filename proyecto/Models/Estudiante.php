@@ -17,7 +17,7 @@ class Estudiante{
 	}
 
 	public function set($atributo, $contenido){
-		$this->$atributo = $contenido
+		$this->$atributo = $contenido;
 	}
 
 	public function get($atributo){
@@ -41,7 +41,7 @@ class Estudiante{
 	}
 
 	public function edit(){
-		$sql = "UPDATE FROM estudiantes SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}' WHERE id = '{$this->id}'";
+		$sql = "UPDATE estudiantes SET nombre = '{$this->nombre}', edad = '{$this->edad}', promedio = '{$this->promedio}', id_seccion = '{$this->id_seccion}' WHERE id = '{$this->id}'";
 		$this->con->consultaSimple($sql);
 	}
 
